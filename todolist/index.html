@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 할일</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>오늘의 할일</h1>
+        <p id="today" class="today"></p>
+      </div>
+      <div class="header-actions">
+        <button id="historyBtn" class="icon-btn" type="button" aria-label="지난 기록 보기" title="지난 기록">🗓️</button>
+        <button id="themeBtn" class="icon-btn" type="button" aria-label="테마 전환" title="테마 전환">🌙</button>
+      </div>
+    </header>
+
+    <div id="storageBanner" class="banner banner-warn" role="alert" hidden>
+      브라우저 저장소를 사용할 수 없어 새로고침하면 목록이 사라집니다.
+    </div>
+
+    <div id="carryBanner" class="banner" hidden>
+      <span id="carryText"></span>
+      <div class="banner-actions">
+        <button id="carryYes" type="button" class="btn btn-primary btn-sm">가져오기</button>
+        <button id="carryNo" type="button" class="btn btn-ghost btn-sm">괜찮아요</button>
+      </div>
+    </div>
+
+    <section class="progress" aria-label="진행률">
+      <div id="progressBar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <p id="progressText" class="progress-text"></p>
+    </section>
+
+    <form id="addForm" class="add-form" autocomplete="off">
+      <label for="newTodo" class="sr-only">새 할일</label>
+      <input id="newTodo" type="text" maxlength="100" placeholder="할 일을 입력하세요..." autofocus>
+      <label for="newPriority" class="sr-only">우선순위</label>
+      <select id="newPriority">
+        <option value="high">높음</option>
+        <option value="medium" selected>보통</option>
+        <option value="low">낮음</option>
+      </select>
+      <button type="submit" class="btn btn-primary">추가</button>
+    </form>
+
+    <nav class="filters" role="tablist" aria-label="필터">
+      <button type="button" role="tab" data-filter="all">전체</button>
+      <button type="button" role="tab" data-filter="active">진행 중</button>
+      <button type="button" role="tab" data-filter="done">완료</button>
+    </nav>
+
+    <ul id="list" class="list" aria-label="할일 목록"></ul>
+    <p id="empty" class="empty" hidden></p>
+
+    <footer class="footer">
+      <span id="remaining"></span>
+      <button id="clearDone" type="button" class="btn btn-ghost btn-sm">완료 항목 지우기</button>
+    </footer>
+    <p class="hint">더블클릭으로 수정 · 색 점을 눌러 우선순위 변경 · 드래그 또는 Alt+↑/↓로 순서 이동</p>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span id="toastText"></span>
+    <button id="toastUndo" type="button">실행 취소</button>
+  </div>
+
+  <div id="celebrate" class="celebrate" aria-hidden="true"></div>
+
+  <dialog id="historyDialog" class="history" aria-labelledby="historyTitle">
+    <div class="history-head">
+      <h2 id="historyTitle">지난 기록</h2>
+      <button id="historyClose" class="icon-btn" type="button" aria-label="닫기">×</button>
+    </div>
+    <div id="historyBody" class="history-body"></div>
+  </dialog>
+
+  <script src="js/utils.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
