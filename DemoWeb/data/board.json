@@ -1,0 +1,73 @@
+{
+  "nextPostId": 7,
+  "nextCommentId": 3,
+  "posts": [
+    {
+      "category": "notice",
+      "title": "DemoWeb 게시판에 오신 것을 환영합니다",
+      "content": "자유롭게 글을 작성하고 댓글을 남겨 보세요.\n\n글을 쓸 때 입력한 비밀번호로 나중에 글을 수정하거나 삭제할 수 있습니다.\n(예시 글의 비밀번호는 모두 1234 입니다.)",
+      "author": "관리자",
+      "createdAt": "2026-10-31T01:34:17.784Z",
+      "views": 42,
+      "comments": [],
+      "id": 1,
+      "passwordHash": "74447322dea71cba362d79b1bc6b8538:d5ba6cce277045936545eb10a914e433b1a4841a95f90ce22aca79bb3974c891",
+      "updatedAt": null
+    },
+    {
+      "category": "free",
+      "title": "Next.js 16 써보신 분 계신가요?",
+      "content": "Cache Components가 기본으로 켜져 있던데 다들 어떻게 쓰고 계신지 궁금합니다.",
+      "author": "개발자A",
+      "createdAt": "2026-11-01T19:34:17.784Z",
+      "views": 17,
+      "comments": [
+        {
+          "id": 1,
+          "author": "개발자B",
+          "content": "Suspense 경계만 잘 잡으면 생각보다 편하더라고요.",
+          "createdAt": "2026-11-01T21:34:17.784Z"
+        }
+      ],
+      "id": 2,
+      "passwordHash": "74447322dea71cba362d79b1bc6b8538:d5ba6cce277045936545eb10a914e433b1a4841a95f90ce22aca79bb3974c891",
+      "updatedAt": null
+    },
+    {
+      "category": "qna",
+      "title": "shadcn/ui 컴포넌트 커스터마이징 질문",
+      "content": "버튼 색상을 프로젝트 전체에서 바꾸고 싶은데 globals.css의 CSS 변수만 수정하면 되나요?",
+      "author": "질문러",
+      "createdAt": "2026-11-02T20:34:17.784Z",
+      "views": 9,
+      "comments": [],
+      "id": 3,
+      "passwordHash": "74447322dea71cba362d79b1bc6b8538:d5ba6cce277045936545eb10a914e433b1a4841a95f90ce22aca79bb3974c891",
+      "updatedAt": null
+    },
+    {
+      "category": "free",
+      "title": "오늘 점심 뭐 드셨나요",
+      "content": "저는 김치찌개 먹었습니다 🍲",
+      "author": "배고픈사람",
+      "createdAt": "2026-11-03T00:34:17.784Z",
+      "views": 4,
+      "comments": [],
+      "id": 4,
+      "passwordHash": "74447322dea71cba362d79b1bc6b8538:d5ba6cce277045936545eb10a914e433b1a4841a95f90ce22aca79bb3974c891",
+      "updatedAt": null
+    },
+    {
+      "category": "free",
+      "title": "바이브코딩 교육",
+      "content": "11/2~3 바이브코딩 교육 수강중",
+      "author": "SY",
+      "id": 6,
+      "passwordHash": "105a2f700ca6b563a1eff217fc44207e:34efaec8b8654f89da8ba01a4d8d7e1bae48f192a8218dd554f568565475727b",
+      "createdAt": "2026-11-03T01:42:27.127Z",
+      "updatedAt": null,
+      "views": 1,
+      "comments": []
+    }
+  ]
+}
