@@ -1,0 +1,4 @@
+# PyInstaller build output (regenerate with build_exe.bat)
+build/
+dist/
+*.spec
